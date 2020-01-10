@@ -1,0 +1,74 @@
+$page_width: 1903px; //页面宽度
+$page_container: 100%; //页面高度自适应
+$fontsize14: 14px; //字体大小14px;
+$fontsize16px: 18px; //字体大小16px;
+$fontsize18: 18px; //字体大小18px;
+@import "compass/reset"; //重置浏览器的默认样式
+
+
+@mixin width_margin($width:1280px,$margin:0 auto){
+    width:$width;
+    margin:0 auto;
+}
+
+$colors: (
+  a: #ccc,//顶部
+  b: #cc0,//头部
+  c: #bf040f,//主导航栏
+  d: #d45,//轮播图
+  e: #ddd,//三个广告栏
+  f: #aee,//大广告
+  g: #daa,//主体部分1
+  h:#eef,//主体部分2
+  i:#acc,//尾部
+);
+#top{//顶部
+    width: 1280px;
+    height: 34px;
+    background: map-get($colors, a);
+    @include width_margin();
+}
+#header{//头部
+    width: 100%;
+    height: 130px;
+    background: map-get($colors, b);
+}
+#nav{//主导航栏
+    width: 100%;
+    height: 60px;
+    background: map-get($colors, c);
+}
+#viewpaper{//轮播图
+    width: 100%;
+    height: 420px;
+    background: map-get($colors, d);
+}
+#threeAd{//三个广告栏
+    width: 100%;
+    height: 190px;
+    background: map-get($colors, e);
+    @include width_margin();
+}
+#bigAd{//大广告
+    width: 100%;
+    height: 600px;
+    background: map-get($colors, f);
+    @include width_margin();
+}
+#section_1{//主体部分1
+    width: 100%;
+    height: 800px;
+    background: map-get($colors, g);
+    @include width_margin();
+}
+#section_2{//主体部分2
+    width: 100%;
+    height: 452px;
+    background: map-get($colors, h);
+    @include width_margin();
+}
+#footer{//尾部
+    width: 100%;
+    height: 651px;
+    background: map-get($colors, i);
+}
