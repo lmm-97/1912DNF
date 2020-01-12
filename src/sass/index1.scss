@@ -97,6 +97,13 @@ $colors: (
   margin-right: 0px;
   margin-left: 6px;
   // background: #fff;
+  position: relative;
+}
+.myOrder{
+  position: absolute;
+  background: lightcoral;
+  top: 34px;
+  right: 0px;
 }
 .top_right .list a {
   display: block;
@@ -366,6 +373,7 @@ $colors: (
   color: #ec4828;
   &:hover{
     background: #fffb80;
+    text-decoration: none;
   }
 }
 //右边div
@@ -429,6 +437,23 @@ $colors: (
   right: 195px;
   top: 150px;
 }
+//大图切换按钮
+.switch1{
+  width:68px;
+  height: 8px;
+  position: absolute;
+  top: 400px;
+  left: 445px;
+  background: #6d6d6d;
+}
+.switch2{
+  width:68px;
+  height: 8px;
+  position: absolute;
+  top: 400px;
+  left: 523px;
+  background: #e93729;
+}
 
 #threeAd {
   //三个广告栏
@@ -476,7 +501,13 @@ $colors: (
     height: 600px;
     display: block;
     background: lightsteelblue;
+    img{
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
   }
+  
 }
 
 #section_1 {
@@ -498,6 +529,37 @@ $colors: (
       padding-top: 2px;
       position: relative;
       background: lightslategrey;
+      //渲染出来的图片样式
+      img{
+        width:272px;
+        height: 290px;
+        display: block;
+        margin-bottom: 16px;
+        background: #f6f6f6;
+      }
+      //渲染出来的标题
+      .linkTitle{
+        margin: 0 auto;
+        line-height: 28px;
+        height: 28px;
+        width:240px;
+        overflow: hidden;
+        text-align: center;
+        font-size:16px;
+        display: block;
+        color:#333;
+      }
+      //渲染出来的价格主体
+      .price{
+        display: block;
+        margin:10px auto 0px auto;
+        width: 240px;
+        overflow: hidden;
+        text-align: center;
+        font-size: 14px;  
+        color: #ee4727;
+        padding-left: 15px;
+      }
     }
   }
 }
@@ -610,6 +672,9 @@ $colors: (
         line-height: 30px;
         font-size: 16px;
         color: #000;
+        a:hover{
+          color: #a01f23;
+        }
       }
       a {
         color: #666;

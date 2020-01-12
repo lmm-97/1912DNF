@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <!-- 引入jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- 顶部的背景图 -->
     <div class="topUrl">
         <div class="bg"></div>
@@ -28,7 +30,7 @@
             <!-- 我的订单 -->
             <div class="list">
                 我的订单
-                <div class="myOrder" style="display:none">
+                <div class="myOrder" style="display:block">
                     <a href="https://dnfcity.qq.com/servlet/login?returnUrl=https://dnfcity.qq.com/">我的订单</a>
                     <a href="https://dnfcity.qq.com/servlet/login?returnUrl=https://dnfcity.qq.com/">我的收藏</a>
                     <a href="https://dnfcity.qq.com/servlet/login?returnUrl=https://dnfcity.qq.com/">我的优惠</a>
@@ -207,7 +209,11 @@
             <div class="lArrow"> </div>
             <!-- 右箭头 -->
             <div class="rArrow"> </div>
-
+            <!-- 大图切换按钮 -->
+            <!-- 切换按钮1 -->
+            <div class="switch1"></div>
+            <!-- 切换按钮2 -->
+            <div class="switch2"></div>
         </div>
     </div>
     <!-----------------------------三个广告栏位----------------------------------->
@@ -225,12 +231,13 @@
     </div>
     <!-----------------------------------大广告----------------------------------->
     <div id="bigAd">
-        <a href=""></a>
+        <!-- <a href="" class="biga"></a> -->
+        <!-- 渲染广告 -->
     </div>
     <!--------------------------------主体部分1----------------------------------->
     <div id="section_1">
         <!-- 渲染 -->
-        <ul>
+        <!-- <ul>
             <li></li>
             <li></li>
             <li></li>
@@ -239,17 +246,17 @@
             <li></li>
             <li></li>
             <li></li>
-        </ul>
+        </ul> -->
     </div>
     <!--------------------------------主体部分2----------------------------------->
     <div id="section_2">
         <!-- 渲染 -->
-        <a href="" class="zuo">
-            <!-- 这里放图片 -->
+        <!-- <a href="" class="zuo">
+            <img src="" alt="">
         </a>
         <a href="" class="you">
-            <!-- 这里放图片 -->
-        </a>
+            <img src="" alt="">
+        </a> -->
 
     </div>
     <!-------------------------------------尾部----------------------------------->
@@ -282,26 +289,35 @@
                 <!-- 购物指南 -->
                 <li class="shop">
                     <h3><a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=44&captionType=whelp"
-                            style="color: #282725;">购物指南</a></h3>
-                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=44&captionType=whelp">常见问题</a>
-                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=15&captionType=whelp">如何查看订单</a>
-                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=14&captionType=whelp">网站订购流程</a>
-                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=13&captionType=whelp">用户登录及注册</a>
+                            style="color: #282725;" target="_blank">购物指南</a></h3>
+                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=44&captionType=whelp"
+                        target="_blank">常见问题</a>
+                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=15&captionType=whelp"
+                        target="_blank">如何查看订单</a>
+                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=14&captionType=whelp"
+                        target="_blank">网站订购流程</a>
+                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=13&captionType=whelp"
+                        target="_blank">用户登录及注册</a>
                 </li>
                 <!-- 配送方式 -->
                 <li class="dis">
                     <h3><a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=47&captionType=whelp"
-                            style="color: #282725;">配送方式</a></h3>
-                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=47&captionType=whelp">全场满200元免运费</a>
-                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=11&captionType=whelp">配送范围及运费</a>
+                            style="color: #282725;" target="_blank">配送方式</a></h3>
+                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=47&captionType=whelp"
+                        target="_blank">全场满200元免运费</a>
+                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=11&captionType=whelp"
+                        target="_blank">配送范围及运费</a>
                 </li>
                 <!-- 售后服务 -->
                 <li class="after">
                     <h3><a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=46&captionType=whelp"
-                            style="color: #282725;">售后服务</a></h3>
-                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=10&captionType=whelp">7天无理由退换货</a>
-                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=9&captionType=whelp">如何办理退换货</a>
-                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=10&captionType=whelp">换货政策说明</a>
+                            style="color: #282725;" target="_blank">售后服务</a></h3>
+                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=10&captionType=whelp"
+                        target="_blank">7天无理由退换货</a>
+                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=9&captionType=whelp"
+                        target="_blank">如何办理退换货</a>
+                    <a href="https://dnfcity.qq.com/help/helpCenter.html?itemId=10&captionType=whelp"
+                        target="_blank">换货政策说明</a>
                 </li>
                 <!-- 客服中心 -->
                 <li class="ser">
@@ -339,6 +355,13 @@
     <div class="sus">
 
     </div>
+
+
+
+
+    <!-- 引入index1.js -->
+    <script src="script/index1.js"></script>
+    <script src="script/indexbig.js"></script>
 </body>
 
 </html>
