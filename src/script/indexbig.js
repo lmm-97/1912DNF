@@ -14,7 +14,7 @@
                     //字符串拼接
                     let $strbig = '';
                     $strbig += `
-                    <a href="../details.html?=${value.sid}" class="biga">
+                    <a href="http://10.31.152.18/DNF/src/details.html?=${value.sid}" class="biga">
                     <img src="${value.picurl}" alt="">
                 </a>
                     `
@@ -40,10 +40,10 @@
                     let $stra1 = '';
                     //字符串拼接
                     $stra1 += `
-                    <a href="../details.html?=${value1.sid}" class="zuo">
+                    <a href="http://10.31.152.18/DNF/src/details.html?=${value1.sid}" class="zuo">
                     <img src="${value1.picurl}" alt="">
                 </a>
-                    <a href="../detail.html?=${value2.sid}" class="you">
+                    <a href="http://10.31.152.18/DNF/src/details.html?=${value2.sid}" class="you">
                     <img src="${value2.picurl}" alt="">
                 </a>
                     `

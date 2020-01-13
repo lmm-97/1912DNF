@@ -96,12 +96,14 @@ $colors: (
   cursor: default; //普通光标
   margin-right: 0px;
   margin-left: 6px;
-  // background: #fff;
+  background: #fff;
   position: relative;
 }
-.myOrder{
+.myOrder {
   position: absolute;
-  background: lightcoral;
+  width: 70px;
+  height: 130px;
+  background: #fff;
   top: 34px;
   right: 0px;
 }
@@ -109,7 +111,7 @@ $colors: (
   display: block;
   text-align: left;
   color: #333;
-  text-indent: 10px;
+  margin: 0 auto;
   width: 100%;
 }
 .phone {
@@ -229,31 +231,43 @@ $colors: (
     }
   }
 }
-
-#viewpaper {
-  //轮播图
-  width: 100%;
+// 轮播图
+#lunbo {
+  width:100%;
   height: 420px;
+  margin: 0 auto;
   position: relative;
-  // background: map-get($colors, d);
-  // 大图1
-  .ban1 a {
-    display: none;
-    background: url(../images/flash290.png) center center;
-    width: 100%;
-    height: 420px;
-    position: absolute;
-    z-index: -100;
-  }
-  .ban2 a {
-    display: block;
-    background: url(../images/flash293.png) center center;
-    width: 100%;
-    height: 420px;
-    position: absolute;
-    z-index: -100;
-  }
+  cursor: pointer;
 }
+#lunbo ul li {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+}
+#lunbo ul li img {
+  width:100%;
+  height: 420px;
+  display: block;
+}
+#lunbo ol {
+  position: absolute;
+  top: 395px;
+  left: 470px;
+  z-index: 2000;
+}
+.allDiv ol li {
+  float: left;
+  width: 68px;
+  height: 8px;
+  background: #6d6d6d;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.allDiv ol li.active {
+  background: #ec4828;
+}
+
 //总的div
 .allDiv {
   width: 1120px;
@@ -284,7 +298,7 @@ $colors: (
     height: 104px;
     border-top: 1px solid #e3450c;
     position: relative;
-    &:hover:nth-child(-n+3) {
+    &:hover:nth-child(-n + 3) {
       background: #e33a19;
     }
   }
@@ -313,13 +327,18 @@ $colors: (
     //需要溢出隐藏的li
     background: #ef5c27;
     overflow: hidden;
-    &:hover{
-      overflow:visible;
+    position: relative;
+    &:hover {
+      overflow: visible;
     }
     .overDiv {
       width: 330px;
       height: 105px;
       background: #ef5c27;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3000;
       &:hover {
         background: #e33a19;
       }
@@ -371,7 +390,7 @@ $colors: (
   font-size: 18px;
   font-weight: border;
   color: #ec4828;
-  &:hover{
+  &:hover {
     background: #fffb80;
     text-decoration: none;
   }
@@ -420,39 +439,32 @@ $colors: (
   margin-top: 1px;
 }
 // 左右箭头
-.lArrow {
+#left {
   background: url(../images/next.png) -10px -10px no-repeat;
   width: 48px;
   height: 103px;
   position: absolute;
   left: 204px;
   top: 150px;
-  z-index:-1;
+  z-index: 1000;
+  &:hover {
+    background: url(../images/next.png) -10px -123px no-repeat;
+  }
 }
-.rArrow {
+
+#right {
   background: url(../images/next.png) -68px -10px no-repeat;
   width: 48px;
   height: 103px;
   position: absolute;
   right: 195px;
   top: 150px;
-}
-//大图切换按钮
-.switch1{
-  width:68px;
-  height: 8px;
-  position: absolute;
-  top: 400px;
-  left: 445px;
-  background: #6d6d6d;
-}
-.switch2{
-  width:68px;
-  height: 8px;
-  position: absolute;
-  top: 400px;
-  left: 523px;
-  background: #e93729;
+  z-index: 1000;
+  &:hover {
+    &:hover {
+      background: url(../images/next.png) -68px -123px no-repeat;
+    }
+  }
 }
 
 #threeAd {
@@ -501,20 +513,19 @@ $colors: (
     height: 600px;
     display: block;
     background: lightsteelblue;
-    img{
+    img {
       width: 100%;
       height: 100%;
       margin: 0 auto;
     }
   }
-  
 }
 
 #section_1 {
   //主体部分1
   // width: 100%;
   height: 800px;
-  background: map-get($colors, g);
+  // background: map-get($colors, g);
   @include width_margin();
   width: 1120px;
   // 渲染
@@ -528,35 +539,35 @@ $colors: (
       height: 400px;
       padding-top: 2px;
       position: relative;
-      background: lightslategrey;
+      // background: lightslategrey;
       //渲染出来的图片样式
-      img{
-        width:272px;
+      img {
+        width: 272px;
         height: 290px;
         display: block;
         margin-bottom: 16px;
-        background: #f6f6f6;
+        // background: #f6f6f6;
       }
       //渲染出来的标题
-      .linkTitle{
+      .linkTitle {
         margin: 0 auto;
         line-height: 28px;
         height: 28px;
-        width:240px;
-        overflow: hidden;
-        text-align: center;
-        font-size:16px;
-        display: block;
-        color:#333;
-      }
-      //渲染出来的价格主体
-      .price{
-        display: block;
-        margin:10px auto 0px auto;
         width: 240px;
         overflow: hidden;
         text-align: center;
-        font-size: 14px;  
+        font-size: 16px;
+        display: block;
+        color: #333;
+      }
+      //渲染出来的价格主体
+      .price {
+        display: block;
+        margin: 10px auto 0px auto;
+        width: 240px;
+        overflow: hidden;
+        text-align: center;
+        font-size: 14px;
         color: #ee4727;
         padding-left: 15px;
       }
@@ -568,7 +579,7 @@ $colors: (
   //主体部分2
   // width: 100%;
   height: 452px;
-  background: map-get($colors, h);
+  // background: map-get($colors, h);
   @include width_margin();
   width: 1120px;
   margin-top: 40px;
@@ -583,12 +594,12 @@ $colors: (
   .zuo {
     top: 0;
     left: 0;
-    background: lightsteelblue;
+    // background: lightsteelblue;
   }
   .you {
     top: 0px;
     left: 570px;
-    background: mediumseagreen;
+    // background: mediumseagreen;
   }
   img {
     width: 550px;
@@ -672,7 +683,7 @@ $colors: (
         line-height: 30px;
         font-size: 16px;
         color: #000;
-        a:hover{
+        a:hover {
           color: #a01f23;
         }
       }

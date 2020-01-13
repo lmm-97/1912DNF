@@ -14,7 +14,7 @@
                     $.each(data, function (index, value) {
                         $strhtml += `
                         <li>
-                        <a href="../details.html?sid=${value.sid}">
+                        <a href="http://10.31.152.18/DNF/src/details.html?sid=${value.sid}">
                         <img src="${value.picurl}">
                         <a class="linkTitle">${value.title}</a>
                         <span class="price">${value.price}元</span>

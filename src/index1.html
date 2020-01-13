@@ -10,6 +10,7 @@
         content="DNF周边商城,周边商城,游戏周边商城,地下城与勇士,DNF,觉醒,冒险家,鬼剑士,格斗,格斗家,神枪手,枪手,圣职,阿拉德,勇士服装,游戏模型,配饰,生活用品,典藏礼包,周边商品" />
     <meta name="description" content="DNF周边商城有最权威的官方认证，最上乘的商品质量，最丰厚的游戏礼品，最贴心的售后服务，为您提供愉悦的商城购物体验。" />
     <link rel="stylesheet" href="../src/stylesheets/index1.css">
+    <link rel="stylesheet" href="../src/stylesheets/louti.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
             <!-- 我的订单 -->
             <div class="list">
                 我的订单
-                <div class="myOrder" style="display:block">
+                <div class="myOrder" style="display:none">
                     <a href="https://dnfcity.qq.com/servlet/login?returnUrl=https://dnfcity.qq.com/">我的订单</a>
                     <a href="https://dnfcity.qq.com/servlet/login?returnUrl=https://dnfcity.qq.com/">我的收藏</a>
                     <a href="https://dnfcity.qq.com/servlet/login?returnUrl=https://dnfcity.qq.com/">我的优惠</a>
@@ -122,17 +123,36 @@
 
 
     <!-----------------------------------轮播图----------------------------------->
-    <div id="viewpaper">
-        <!-- 大图1 -->
-        <div class="ban1">
-            <a href="https://dnfcity.qq.com/zhuanti/2019/1127dingzhi.html" target="_blank"></a>
-        </div>
-        <!-- 大图2 -->
-        <div class="ban2">
-            <a href="https://dnfcity.qq.com/zhuanti/2019/1113gongchuang.html" target="_blank"></a>
-        </div>
+    <div id="lunbo">
+        <ul>
+            <li style="opacity: 1;"><img src="images/flash290.png" alt=""></li>
+            <li><img src="images/flash293.png" alt=""></li>
+
+        </ul>
+
+
         <!-- 总div -->
         <div class="allDiv">
+            <!-- 切换按钮 -->
+            <ol>
+                <li class="active switch1"></li>
+                <li class="switch2"></li>
+            </ol>
+            <!-- 左右箭头 -->
+            <!-- 左箭头 -->
+            <a href="javascript:;" id="left"></a>
+            <!-- 右箭头 -->
+            <a href="javascript:;" id="right"></a>
+            <!-- 左右箭头 -->
+            <!-- 左箭头 -->
+            <!-- <div class="lArrow"> </div> -->
+            <!-- 右箭头 -->
+            <!-- <div class="rArrow"> </div> -->
+            <!-- 大图切换按钮 -->
+            <!-- 切换按钮1 -->
+            <!-- <div class="switch1"></div> -->
+            <!-- 切换按钮2 -->
+            <!-- <div class="switch2"></div> -->
             <!-- 中间跳转a标签 -->
             <a class="skip" href="https://dnfcity.qq.com/zhuanti/2019/1113gongchuang.html" target="_blank">
             </a>
@@ -204,18 +224,10 @@
                     </a>
                 </div>
             </div>
-            <!-- 左右箭头 -->
-            <!-- 左箭头 -->
-            <div class="lArrow"> </div>
-            <!-- 右箭头 -->
-            <div class="rArrow"> </div>
-            <!-- 大图切换按钮 -->
-            <!-- 切换按钮1 -->
-            <div class="switch1"></div>
-            <!-- 切换按钮2 -->
-            <div class="switch2"></div>
         </div>
     </div>
+
+
     <!-----------------------------三个广告栏位----------------------------------->
     <div id="threeAd">
         <a href="https://dnfcity.qq.com/ware/productList.html?lft=112&rgt=113&layerNum=2&categoryTagId=112113&pare=1"
@@ -355,13 +367,25 @@
     <div class="sus">
 
     </div>
-
-
-
-
+    <!-- 楼梯 -->
+    <div id="loutinav">
+        <!--小,导航-->
+        <ul>
+            <li class="active"><span>轮播图</span> </li>
+            <li><span>专区</span> </li>
+            <li><span>天骄普雷</span> </li>
+            <li><span>商品</span> </li>
+            <li><span>雕塑</span> </li>
+            <li><span>尾部</span> </li>
+            <li class="last">顶部</li>
+        </ul>
+    </div>
+    <!-- 引入jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- 引入index1.js -->
     <script src="script/index1.js"></script>
     <script src="script/indexbig.js"></script>
+    <script src="script/lunbotu.js"></script>
 </body>
 
 </html>
