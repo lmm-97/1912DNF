@@ -11,7 +11,7 @@
             }).done(
                 (data) => {
                     let $strhtml = '<ul>';
-                    $.each(data, function (index, value) {
+                    $.each(data, function (index, value) {//sid指的是传到后端的sid
                         $strhtml += `
                         <li>
                         <a href="http://10.31.152.18/DNF/src/details.html?sid=${value.sid}">

@@ -58,6 +58,8 @@
 </head>
 
 <body>
+        <!-- 引入jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--PC浏览器-->
     <div id="pc_qq" style="display: block;">
         <div class="qq_topbar">
@@ -90,6 +92,8 @@
                 <input type="text" placeholder="密码" class="passward">
                 <!------------------------------------------------ 登录 ----------------------------------------------------------->
                 <input type="button" value="登录" class="denglu">
+                <!------------------------------------------------注册跳转----------------------------------------------------------------->
+                <a href="http://10.31.152.18/DNF/src/registry.html" class="zc">注册账号</a>
             </div>
         </div>
         <div class="bottom" id="bottom">
@@ -175,58 +179,6 @@
         </div>
     </div>
     <!--PC浏览器end-->
-
-    <!--手机-->
-    <div id="m_qq" style="display:none;"></div>
-    <!--手机end-->
-    <script src="./QQ用户登录--DNF周边商城_files/jquery1.8-min.js.下载"></script>
-    <script language="JavaScript" type="text/javascript">
-        $('#menubar').load('/inc/menu.html');
-//$('#bottom').load('/inc/bottom.html');
-    </script>
-
-    <!--端口识别-->
-    <script type="text/javascript">
-        // <!--平台、设备和操作系统 -->  
-        var system = {
-            win: false,
-            mac: false,
-            xll: false
-        };
-        //检测平台  
-        var p = navigator.platform;
-        //alert(p); 
-        system.win = p.indexOf("Win") == 0;
-        system.mac = p.indexOf("Mac") == 0;
-        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
-        //跳转语句  
-        if (system.win || system.mac || system.xll) {
-            document.write('<link href="https://img.dnfcity.qq.com/goodsImages/15imgjs/css/base.css" rel="stylesheet" type="text/css">');
-            document.write('<link href="/15imgjs/css/qq_login.css" rel="stylesheet" type="text/css">');
-            document.getElementById("pc_qq").style.display = "block";
-            document.getElementById("m_qq").innerHTML = "";
-
-            setTimeout(function () {
-                document.getElementById("qq_bar_div").style.backgroundImage = "url('https://img.dnfcity.qq.com/goodsImages/15imgjs/images/base/login_bg_font.jpg')";
-            }, 2500);
-        } else {
-            //手机页面
-            //alert("手机页面");
-            document.write('<meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no">');
-            document.write('<meta name="apple-touch-fullscreen" content="no" />');
-            document.write('<meta content="telephone=no" name="format-detection" />');
-            document.write('<meta name="apple-mobile-web-app-capable" content="no" />');
-            document.getElementById("m_qq").style.display = "block";
-            document.getElementById("pc_qq").innerHTML = "";
-            setTimeout(function () {
-                document.getElementById("m_qq").style.backgroundImage = "url('https://img.dnfcity.qq.com/goodsImages/15imgjs/images/bg_font.jpg')";
-            }, 2500);
-
-            //手机页面end
-
-        }
-
-    </script>
     <link href="stylesheets/base.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/qq_login.css" rel="stylesheet" type="text/css">
     <!--端口识别end-->
